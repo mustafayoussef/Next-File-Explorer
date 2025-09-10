@@ -125,7 +125,7 @@ A modern, feature-rich file explorer built with **Next.js 14**, **TypeScript**, 
 
 ## 🎥 Demo Video
 
-[Demo Video](docs/File-Explorer.mp4)
+https://github.com/user-attachments/assets/2842d1d4-6c20-4fbe-b1a0-a0dd0d9e2606
 
 ## 🔧 Configuration
 
