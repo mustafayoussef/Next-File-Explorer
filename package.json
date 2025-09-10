@@ -10,9 +10,13 @@
     "test": "echo \"No tests specified\""
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.9.0",
+    "lucide-react": "^0.543.0",
     "next": "^14.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.6.0",
+    "react-redux": "^9.2.0"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
