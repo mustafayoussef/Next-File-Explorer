@@ -7,11 +7,12 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { FileIcon } from "../ui/FileIcon";
 import { FileViewer } from "../ui/FileViewer";
+import { FileNode } from "@/lib/data";
 
 export function SearchBar() {
   const dispatch = useDispatch();
   const { searchQuery, searchResults } = useSelector((state: RootState) => state.fileSystem);
-  const [selectedFile, setSelectedFile] = useState<string | null>(null);
+  const [selectedFile, setSelectedFile] = useState<FileNode | null>(null);
   const [showResults, setShowResults] = useState(false);
 
   const handleSearch = (query: string) => {
@@ -66,7 +67,7 @@ export function SearchBar() {
               ) : (
                 <button
                   onClick={() => {
-                    setSelectedFile(item.name);
+                    setSelectedFile(item);
                     setShowResults(false);
                     dispatch(clearSearchAction());
                   }}
@@ -82,7 +83,7 @@ export function SearchBar() {
         </div>
       )}
 
-      {selectedFile && <FileViewer fileName={selectedFile} onClose={() => setSelectedFile(null)} />}
+      {selectedFile && <FileViewer file={selectedFile} onClose={() => setSelectedFile(null)} />}
     </div>
   );
 }
